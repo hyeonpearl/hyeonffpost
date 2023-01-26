@@ -1,4 +1,5 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import NewsItem from './NewsItem';
 
@@ -14,23 +15,40 @@ const NewsListBlock = styled.div`
   }
 `;
 
-const sampleArticle = {
-  title: 'title',
-  description: 'des',
-  url: 'https://google.co.kr',
-  urlToImage: 'https://via.placeholder.com/160',
-};
-
 const NewsList = () => {
+  const [articles, setArticles] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const API_KEY = '6a3d765570ba4f66ba22b6a8763e640e';
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const response = await axios.get(
+          `https://newsapi.org/v2/top-headlines?country=kr&apiKey=${API_KEY}`
+        );
+        setArticles(response.data.articles);
+      } catch (e) {
+        console.log(e);
+      }
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <NewsListBlock>Loading...</NewsListBlock>;
+  }
+  if (!articles) {
+    return null;
+  }
+
   return (
     <NewsListBlock>
-      <NewsItem article={sampleArticle} />
-      <NewsItem article={sampleArticle} />
-      <NewsItem article={sampleArticle} />
-      <NewsItem article={sampleArticle} />
-      <NewsItem article={sampleArticle} />
-      <NewsItem article={sampleArticle} />
-      <NewsItem article={sampleArticle} />
+      {articles.map(article => (
+        <NewsItem key={article.url} article={article} />
+      ))}
     </NewsListBlock>
   );
 };
