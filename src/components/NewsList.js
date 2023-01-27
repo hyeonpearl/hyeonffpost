@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import styled from 'styled-components';
 import usePromise from '../hooks/usePromise';
 import NewsItem from './NewsItem';
@@ -20,9 +20,12 @@ const NewsList = ({ category }) => {
 
   const [isLoading, response, error] = usePromise(() => {
     const query = category === 'all' ? '' : `&category=${category}`;
-    return axios.get(
+    return fetch(
       `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=${API_KEY}`
-    );
+    ).then(res => res.json());
+    // axios.get(
+    //   `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=${API_KEY}`
+    // );
   }, [category]);
 
   if (isLoading) {
@@ -35,7 +38,7 @@ const NewsList = ({ category }) => {
     return <NewsListBlock>에러 발생!</NewsListBlock>;
   }
 
-  const { articles } = response.data;
+  const { articles } = response;
   return (
     <NewsListBlock>
       {articles.map(article => (
