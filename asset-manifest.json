@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/news-viewer/static/js/main.7c01ea79.js",
+    "main.js": "/news-viewer/static/js/main.2d91f614.js",
     "index.html": "/news-viewer/index.html",
-    "main.7c01ea79.js.map": "/news-viewer/static/js/main.7c01ea79.js.map"
+    "main.2d91f614.js.map": "/news-viewer/static/js/main.2d91f614.js.map"
   },
   "entrypoints": [
-    "static/js/main.7c01ea79.js"
+    "static/js/main.2d91f614.js"
   ]
 }
