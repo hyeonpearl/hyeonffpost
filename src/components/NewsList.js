@@ -1,19 +1,8 @@
 import axios from 'axios';
-import styled from 'styled-components';
 import usePromise from '../hooks/usePromise';
-import NewsItem from './NewsItem';
+import styled from 'styled-components';
 
-const NewsListBlock = styled.div`
-  box-sizing: border-box;
-  padding: 0 0 3rem 0;
-  width: 768px;
-  margin: 0 auto;
-  margin-top: 2rem;
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    padding: 0 1rem;
-  }
-`;
+import NewsItem from './NewsItem';
 
 const NewsList = ({ category }) => {
   const API_KEY = '6a3d765570ba4f66ba22b6a8763e640e';
@@ -44,5 +33,18 @@ const NewsList = ({ category }) => {
     </NewsListBlock>
   );
 };
+
+const NewsListBlock = styled.div`
+  box-sizing: border-box;
+  padding: 0 0 3rem 0;
+  width: 768px;
+  margin: 0 auto;
+  margin-top: 8rem;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 1rem;
+  }
+`;
 
 export default NewsList;

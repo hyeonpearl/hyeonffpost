@@ -33,16 +33,45 @@ const categories = [
   },
 ];
 
+const Categories = () => {
+  return (
+    <CategoriesBlock>
+      {categories.map(c => (
+        <Category
+          key={c.name}
+          className={({ isActive }) => (isActive ? 'active' : undefined)}
+          to={c.name === 'all' ? '/hyeonffpost/all' : `/hyeonffpost/${c.name}`}
+        >
+          {c.text}
+        </Category>
+      ))}
+    </CategoriesBlock>
+  );
+};
+
 const CategoriesBlock = styled.div`
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
   display: flex;
-  padding: 1rem;
-  width: 768px;
+  padding: 1rem 1rem 0 1rem;
   margin: 0 auto;
+  justify-content: center;
+  background: #fff;
+
   @media screen and (max-width: 768px) {
-    width: 100%;
+    top: 3rem;
     overflow-x: auto;
+    justify-content: left;
+    scrollbar-width: none;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
   }
 `;
+
 const Category = styled(NavLink)`
   font-size: 1.125rem;
   cursor: pointer;
@@ -52,36 +81,21 @@ const Category = styled(NavLink)`
   padding: 0 0 0.25rem 0;
 
   &:hover {
-    color: #495057;
+    color: #89ddff;
   }
   &.active {
     font-weight: 600;
-    border-bottom: 2px solid #22b8cf;
-    color: #22b8cf;
+    border-bottom: 2px solid #3bc9db;
+    color: #3bc9db;
 
     &:hover {
-      color: #3bc9db;
+      border-bottom: 2px solid #89ddff;
+      color: #89ddff;
     }
   }
   & + & {
     margin: 0 0 0 1rem;
   }
 `;
-
-const Categories = () => {
-  return (
-    <CategoriesBlock>
-      {categories.map(c => (
-        <Category
-          key={c.name}
-          className={({ isActive }) => (isActive ? 'active' : undefined)}
-          to={c.name === 'all' ? '/' : `/${c.name}`}
-        >
-          {c.text}
-        </Category>
-      ))}
-    </CategoriesBlock>
-  );
-};
 
 export default Categories;

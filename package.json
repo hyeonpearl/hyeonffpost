@@ -13,6 +13,7 @@
     "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
+    "styled-normalize": "^8.0.7",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -23,7 +24,7 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://hyeonpearl.github.io/news-viewer/",
+  "homepage": "https://hyeonpearl.github.io/hyeonffpost/all",
   "eslintConfig": {
     "extends": [
       "react-app",

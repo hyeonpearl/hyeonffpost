@@ -1,13 +1,18 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+
+import GlobalStyle from './GlobalStyle';
 import NewsPage from './routers/NewsPage';
 
 const App = () => {
   return (
-    <Routes>
-      <Route path='/' element={<NewsPage />} />
-      <Route path='/:category' element={<NewsPage />} />
-    </Routes>
+    <>
+      <GlobalStyle />
+      <Routes>
+        <Route path='/hyeonffpost/all' element={<NewsPage />} />
+        <Route path='/hyeonffpost/:category' element={<NewsPage />} />
+      </Routes>
+    </>
   );
 };
 
