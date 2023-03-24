@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/hyeonffpost/static/js/main.9cf7ccc4.js",
+    "main.js": "/hyeonffpost/static/js/main.652892a0.js",
     "index.html": "/hyeonffpost/index.html",
-    "main.9cf7ccc4.js.map": "/hyeonffpost/static/js/main.9cf7ccc4.js.map"
+    "main.652892a0.js.map": "/hyeonffpost/static/js/main.652892a0.js.map"
   },
   "entrypoints": [
-    "static/js/main.9cf7ccc4.js"
+    "static/js/main.652892a0.js"
   ]
 }
