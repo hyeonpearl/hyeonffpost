@@ -18,7 +18,7 @@ const NewsList = ({ category }) => {
     return <NewsListBlock>Loading...</NewsListBlock>;
   }
   if (!response) {
-    return null;
+    return <NewsListBlock>에러 발생!</NewsListBlock>;
   }
   if (error) {
     return <NewsListBlock>에러 발생!</NewsListBlock>;
