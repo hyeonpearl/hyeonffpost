@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/news-viewer/static/js/main.a3d7c28a.js",
-    "index.html": "/news-viewer/index.html",
-    "main.a3d7c28a.js.map": "/news-viewer/static/js/main.a3d7c28a.js.map"
+    "main.js": "/hyeonffpost/all/static/js/main.603a6ea2.js",
+    "index.html": "/hyeonffpost/all/index.html",
+    "main.603a6ea2.js.map": "/hyeonffpost/all/static/js/main.603a6ea2.js.map"
   },
   "entrypoints": [
-    "static/js/main.a3d7c28a.js"
+    "static/js/main.603a6ea2.js"
   ]
 }
