@@ -5,8 +5,8 @@ const Header = () => {
   return (
     <Container>
       <img
-        src={`${process.env.PUBLIC_URL}/assets/hyeonffpost.svg`}
-        alt='hyeonffpost'
+        src={`${process.env.PUBLIC_URL}/assets/pearlffpost.svg`}
+        alt='pearlffpost'
       />
     </Container>
   );

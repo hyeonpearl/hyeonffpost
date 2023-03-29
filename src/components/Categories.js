@@ -40,7 +40,7 @@ const Categories = () => {
         <Category
           key={c.name}
           className={({ isActive }) => (isActive ? 'active' : undefined)}
-          to={c.name === 'all' ? '/hyeonffpost/' : `/hyeonffpost/${c.name}`}
+          to={c.name === 'all' ? '/pearlffpost/' : `/pearlffpost/${c.name}`}
         >
           {c.text}
         </Category>

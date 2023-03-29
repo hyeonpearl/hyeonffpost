@@ -9,8 +9,8 @@ const App = () => {
     <>
       <GlobalStyle />
       <Routes>
-        <Route path='/hyeonffpost/' element={<NewsPage />} />
-        <Route path='/hyeonffpost/:category' element={<NewsPage />} />
+        <Route path='/pearlffpost/' element={<NewsPage />} />
+        <Route path='/pearlffpost/:category' element={<NewsPage />} />
       </Routes>
     </>
   );
