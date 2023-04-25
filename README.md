@@ -13,7 +13,7 @@ News API를 사용하여 만든 뉴스 뷰어 웹사이트입니다.
 - React Router DOM v6
 - Styled Components
 
-## Reference :
+## Reference
 
 - [리액트를 다루는 기술 | VELOPERT](http://www.yes24.com/Product/Goods/79260300)
 - [News API](https://newsapi.org/)
